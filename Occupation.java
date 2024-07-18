@@ -1,0 +1,3 @@
+public enum Occupation {
+    KING,NOBLE,COUNT,BARON,DUKE,VILLAGER,JESTER,MUSICIAN;
+}
