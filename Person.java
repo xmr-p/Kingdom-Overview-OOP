@@ -11,16 +11,16 @@ public abstract class Person {
     float fortune;
     float taxes;
 
-    payTaxes(){
+    void payTaxes(){
         System.out.println("Pay taxes");
     }
-    betrayKingdom(){
+    void betrayKingdom(){
         System.out.println("Betray kingdom");
     }
-    inheritThrone(){
+    void inheritThrone(){
         System.out.println("inherit Throne");
     }
-    unearthSword(){
+    void unearthSword(){
         System.out.println("unearth Sword");
     }
 }

@@ -4,5 +4,5 @@ public class Kingdom {
     String location;
     String currency;
     String [] decrees;
-    String [] alliedKigndoms;
+    String [] alliedKingdoms;
 }
