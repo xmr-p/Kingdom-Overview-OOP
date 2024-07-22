@@ -1,4 +1,4 @@
-public class UpperClass {
+public class UpperClass extends Person{
     int voteValue;
 
     void commandLowerClass(){

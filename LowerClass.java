@@ -1,3 +1,3 @@
-public abstract class LowerClass{
+public abstract class LowerClass extends Person{
     boolean bow;
 }

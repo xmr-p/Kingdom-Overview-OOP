@@ -10,6 +10,9 @@ public abstract class Person {
     float wage;
     float fortune;
     float taxes;
+    Kingdom kingdom;
+    Occupation occupation;
+    HealthState healthState;
 
     void payTaxes(){
         System.out.println("Pay taxes");
