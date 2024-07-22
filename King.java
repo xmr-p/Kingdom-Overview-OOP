@@ -1,5 +1,5 @@
 public class King extends Person{
-    private String secret = "I'm afraid of rats";
+    private final String secret = "I'm afraid of rats";
     boolean trueKing;
 
     void makeDecree(String decree){

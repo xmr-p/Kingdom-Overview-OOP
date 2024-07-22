@@ -10,6 +10,7 @@ public abstract class Person {
     float wage;
     float fortune;
     float taxes;
+    int age;
     Kingdom kingdom;
     Occupation occupation;
     HealthState healthState;
