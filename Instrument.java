@@ -6,6 +6,6 @@ public class Instrument {
     }
 
     void play(){
-        System.out.println("Play sound");
+        System.out.println(sound);
     }
 }

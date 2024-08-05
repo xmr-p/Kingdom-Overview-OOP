@@ -9,6 +9,10 @@ public class Musician extends LowerClass implements Artist{
     }
 
     public void entertain(){
-        System.out.println("Entertain");
+        if (tune) {
+            System.out.println(firstname + " plays his instrument, producing a beautiful " + instruments[0].sound + " sound.");
+        } else {
+            System.out.println(firstname + " plays his instrument, producing a horrible " + instruments[0].sound + " sound.");
+        }
     }
 }
