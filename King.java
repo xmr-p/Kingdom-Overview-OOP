@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class King extends Person {
     private final String secret = "I'm afraid of rats";
@@ -19,6 +17,7 @@ public class King extends Person {
     }
     void banish(Person personToBanish){
         personToBanish.banished = true;
+        personToBanish.kingdom = null;
         System.out.println("The person " + personToBanish.firstname + " " + personToBanish.paternalSurname + " has been banished!");
     }
 }
