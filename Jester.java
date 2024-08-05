@@ -9,6 +9,10 @@ public class Jester extends LowerClass implements Artist{
     }
 
     public void entertain(){
-        System.out.println("Entertain");
+        if (humor) {
+            System.out.println(firstname + " tells the joke: " + jokes[0] + " and everyone laughs.");
+        } else {
+            System.out.println(firstname + " tells the joke: " + jokes[0] + " and no one laughs.");
+        }
     }
 }

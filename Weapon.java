@@ -10,6 +10,6 @@ public class Weapon {
     }
 
     void attack() {
-        System.out.println("Attacks!");
+        System.out.println("The weapon does a " + attackType + " attack!");
     }
 }

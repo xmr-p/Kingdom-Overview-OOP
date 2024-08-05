@@ -6,7 +6,8 @@ public class UpperClass extends Person{
         this.voteValue = voteValue;
     }
 
-    void commandLowerClass(){
-        System.out.println("I'm the boss");
+    void commandLowerClass(LowerClass subordinate) {
+        subordinate.bow = true;
+        System.out.println(firstname + " has been forced to bow");
     }
 }
