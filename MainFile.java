@@ -4,7 +4,6 @@ public class MainFile {
         Kingdom kingdom1 = new Kingdom("K1", "C://path/to/file.png", "Norte de algo", "coin1", new String[]{""}, new String[]{"K2", "K3"});
         King king1 = new King("Mr.", "Rey", "Reyes", true, true, false, false, true, 100.0f, 1000.5f, 0.15f, 28, kingdom1, Occupation.KING, HealthState.HEALTHY, false);
         king1.makeDecree("Decree1");
-        king1.makeDecree("Decree2");
         //Weapons
         Weapon sword = new Weapon("slice",0.7f,Occupation.VILLAGER);
         Weapon flail = new Weapon("punch",2.3f,Occupation.VILLAGER);
