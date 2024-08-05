@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class King extends Person {
     private final String secret = "I'm afraid of rats";
     boolean trueKing;
@@ -7,9 +11,14 @@ public class King extends Person {
     }
 
     void makeDecree(String decree){
-        System.out.println("New Decree");
+        List<String>decreesList
+                = new ArrayList<String>(Arrays.asList(kingdom.decrees));
+        decreesList.add(decree);
+        kingdom.decrees = decreesList.toArray(kingdom.decrees);
+        System.out.println("The King has made a new decree: " + decree);
     }
-    void banish(String name){
-        System.out.println("You're banish");
+    void banish(Person personToBanish){
+        personToBanish.banished = true;
+        System.out.println("The person " + personToBanish.firstname + " " + personToBanish.paternalSurname + " has been banished!");
     }
 }

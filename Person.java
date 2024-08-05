@@ -34,15 +34,28 @@ public abstract class Person {
     }
 
     void payTaxes(){
-        System.out.println("Pay taxes");
+        float amount = wage * taxes;
+        fortune -= amount;
+        System.out.println(amount + " amount of" + kingdom.currency + " were payed as taxes.");
     }
-    void betrayKingdom(){
-        System.out.println("Betray kingdom");
+    void betrayKingdom(King king){
+        if (royalBlood) {
+            System.out.println(firstname + "betrayed the kingdom, but as he had royal blood he got a pardon.");
+        } else {
+            System.out.println(firstname + " betrayed the kingdom.");
+            king.banish(this);
+        }
     }
-    void inheritThrone(){
-        System.out.println("inherit Throne");
+    void inheritThrone(King king){
+        if (royalBlood && paternalSurname.equals(king.paternalSurname)) {
+            king.occupation = Occupation.NOBLE;
+            occupation = Occupation.KING;
+            System.out.println("A new King has taken the throne! All hail " + firstname + "!");
+        }
     }
-    void unearthSword(){
-        System.out.println("unearth Sword");
+    void unearthSword(King king){
+        if (royalBlood && paternalSurname.equals(king.paternalSurname) && firstname.equals("Arthur")) {
+            System.out.println("The King's Sword has been unearthed by the True King!");
+        }
     }
 }
