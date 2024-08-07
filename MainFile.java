@@ -51,5 +51,6 @@ public class MainFile {
         Musician musician2 = new Musician("Ana María","Rivera","Castañeda",false,false,false,false,false,203.9f,245.1f,0.3f,13,kingdom1,Occupation.MUSICIAN,HealthState.PLAGUED,false,new Instrument[]{},true);
         Musician musician3 = new Musician("Francisco","López","Salazar",true,false,true,true,false,99.7f,235.9f,0.3f,11,kingdom1,Occupation.MUSICIAN,HealthState.HEALTHY,false,new Instrument[]{},false);
 
+        instrument1.play();
     }
 }
