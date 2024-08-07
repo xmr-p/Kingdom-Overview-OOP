@@ -10,4 +10,7 @@ public class UpperClass extends Person{
         subordinate.bow = true;
         System.out.println(firstname + " has been forced to bow");
     }
+    public HealthState health(){
+        return healthState;
+    }
 }
