@@ -76,13 +76,15 @@ public class MainFile {
         Musician musician2 = new Musician("Ana María","Rivera","Castañeda",false,setRandomBool(),setRandomBool(),false,false,setRandomFloat(17f,23f),setRandomFloat(80f,90f),0.3f,13,kingdom1,Occupation.MUSICIAN,setRandomHealth(),true,new Instrument[]{},true);
         Musician musician3 = new Musician("Francisco","López","Salazar",true,setRandomBool(),setRandomBool(),true,false,setRandomFloat(17f,23f),setRandomFloat(80f,90f),0.3f,11,kingdom1,Occupation.MUSICIAN,setRandomHealth(),false,new Instrument[]{},false);
 
-        instrument1.play();
-        instrument2.play();
+        //instrument1.play();
+        //instrument2.play();
         kingArturo.unearthSword(king1);
         musician3.unearthSword(king1);
         noble1.payTaxes();
         jester1.betrayKingdom(king1);
-
+        jester1.entertain();
+        jester2.entertain();
+        jester3.entertain();
         //Jokes
 
     }

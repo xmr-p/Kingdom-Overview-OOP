@@ -16,14 +16,14 @@ public class Jester extends LowerClass implements Artist{
         this.humor = humor;
     }
     public static final String[]FunnyJokes = {
-            "¿Qué hace una abeja en el gimnasio? ¡Zum-ba!",
-            "¿Cuál es el animal más antiguo? La cebra, porque está en blanco y negro.",
-            "¿Qué le dice un gusano a otro gusano? ¡Voy a dar una vuelta a la manzana!",
-            "¿Cómo se llama el campeón de buceo japonés? Tokofondo.",
+            "Did you hear about that Italian chef who died?  - He pasta way",
+            "What do clouds wear under their shorts? - Thunderpants!",
+            "What do you call a spider with 10 eyes?  - A spi-i-i-i-i-i-i-ider",
+            "How did the hipster burn his tongue? - He drank his coffee before it was cool !",
             "¿Qué hace un mudo bailando? Una mudanza.",
-            "¿Cuál es el colmo de Aladdín? Tener mal genio.",
-            "¿Cuál es el último animal que subió al arca de Noé? El del-fin.",
-            "¿Cuál es el animal más peligroso de Internet? El mouse-tro.",
+            "What do you call a moose, with no name?; - Anonymoose! ",
+            "What do french fries do when they meet after a long time? - They Ketchup!",
+            "What is an astronaut’s favorite part on a computer? - The space bar.",
             "¿Por qué los robots no tienen amigos? Porque son todos circuitos cerrados.",
             "¿Por qué el smartphone fue al psicólogo? Porque tenía problemas de conexión emocional."
 
