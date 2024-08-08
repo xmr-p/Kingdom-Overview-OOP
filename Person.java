@@ -36,7 +36,7 @@ public abstract class Person {
     void payTaxes(){
         float amount = wage * taxes;
         fortune -= amount;
-        System.out.println(amount + " amount of" + kingdom.currency + " were payed as taxes.");
+        System.out.println(amount + " amount of " + kingdom.currency + " were payed as taxes.");
     }
     void betrayKingdom(King king){
         if (royalBlood) {
@@ -54,8 +54,10 @@ public abstract class Person {
         }
     }
     void unearthSword(King king){
-        if (royalBlood && paternalSurname.equals(king.paternalSurname) && firstname.equals("Arthur")) {
+        if (royalBlood && paternalSurname.equals(king.paternalSurname) && firstname.equals("Arturo")) {
             System.out.println("The King's Sword has been unearthed by the True King!");
+        }else{
+            System.out.println("The Sword cannot be unearthed by " + firstname + paternalSurname + ":(");
         }
     }
 }

@@ -12,11 +12,17 @@ public class MainFile {
         Random random = new Random();
         return random.nextBoolean();
     }
-    //Random ITIcoins
+    //Random float
     public static float setRandomFloat(float min, float max){
         Random random = new Random();
         return random.nextFloat(min,max);
     }
+    //Random int
+    public static int setRandomInt(int min, int max){
+        Random random = new Random();
+        return random.nextInt(min,max);
+    }
+
     public static void main(String[] args) {
         //Main
         System.out.println("Main!");
@@ -62,14 +68,22 @@ public class MainFile {
         Villager villager3 = new Villager(false,noble2,new Tool[] {tool1},false,"María","González","de Hernández",false,setRandomBool(),setRandomBool(),false,false,setRandomFloat(8f,15f),setRandomFloat(70f,80f),0.3f,13,kingdom1,Occupation.VILLAGER,setRandomHealth());
         Villager kingArturo = new Villager(false,noble1,new Tool[]{tool1},false,"Arturo","Romanov","Grimaldi",true,true,false,false,false,setRandomFloat(8f,15f),setRandomFloat(70f,80f),0.3f,16,kingdom1,Occupation.VILLAGER,HealthState.HEALTHY);
             //Jesters
-        Jester jester1 = new Jester(true,new String[]{"joke1","joke2"},false,"Pedro","de la Risa","Sandoval",true,setRandomBool(),setRandomBool(),true,false,setRandomFloat(16f,22f),setRandomFloat(80f,90f),0.3f,17,kingdom1,Occupation.JESTER,setRandomHealth());
-        Jester jester2 = new Jester(false,new String[]{"joke1","joke2"}, true,"Luisito","de los Chistes","Romero",true,setRandomBool(),setRandomBool(),false,false,setRandomFloat(16f,22f),setRandomFloat(80f,90f),0.3f,16,kingdom1,Occupation.JESTER,setRandomHealth());
-        Jester jester3 = new Jester(false,new String[]{"joke1","joke2"}, true,"Ramón","de la Alegría","y Morales",true,setRandomBool(),setRandomBool(),false,false,setRandomFloat(16f,22f),setRandomFloat(80f,90f),0.3f,15,kingdom1,Occupation.JESTER,setRandomHealth());
+        Jester jester1 = new Jester(setRandomBool(),setRandomBool(),"Pedro","de la Risa","Sandoval",true,setRandomBool(),setRandomBool(),true,false,setRandomFloat(16f,22f),setRandomFloat(80f,90f),0.3f,17,kingdom1,Occupation.JESTER,setRandomHealth());
+        Jester jester2 = new Jester(setRandomBool(),setRandomBool(),"Luisito","de los Chistes","Romero",true,setRandomBool(),setRandomBool(),false,false,setRandomFloat(16f,22f),setRandomFloat(80f,90f),0.3f,16,kingdom1,Occupation.JESTER,setRandomHealth());
+        Jester jester3 = new Jester(setRandomBool(),setRandomBool(),"Ramón","de la Alegría","y Morales",true,setRandomBool(),setRandomBool(),false,false,setRandomFloat(16f,22f),setRandomFloat(80f,90f),0.3f,15,kingdom1,Occupation.JESTER,setRandomHealth());
             //Musicians
         Musician musician1 = new Musician("Tomás","de la Cruz","Villavicencio",true,setRandomBool(),setRandomBool(),true,false,setRandomFloat(17f,23f),setRandomFloat(85f,98f),0.3f,12,kingdom1,Occupation.MUSICIAN,setRandomHealth(),true,new Instrument[]{},false);
         Musician musician2 = new Musician("Ana María","Rivera","Castañeda",false,setRandomBool(),setRandomBool(),false,false,setRandomFloat(17f,23f),setRandomFloat(80f,90f),0.3f,13,kingdom1,Occupation.MUSICIAN,setRandomHealth(),true,new Instrument[]{},true);
         Musician musician3 = new Musician("Francisco","López","Salazar",true,setRandomBool(),setRandomBool(),true,false,setRandomFloat(17f,23f),setRandomFloat(80f,90f),0.3f,11,kingdom1,Occupation.MUSICIAN,setRandomHealth(),false,new Instrument[]{},false);
 
         instrument1.play();
+        instrument2.play();
+        kingArturo.unearthSword(king1);
+        musician3.unearthSword(king1);
+        noble1.payTaxes();
+        jester1.betrayKingdom(king1);
+
+        //Jokes
+
     }
 }
