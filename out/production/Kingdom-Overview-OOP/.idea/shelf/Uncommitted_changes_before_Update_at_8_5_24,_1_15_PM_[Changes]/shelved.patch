@@ -1,0 +1,110 @@
+Index: UpperClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class UpperClass extends Person{\n    int voteValue;\n\n    public UpperClass(String firstname, String paternalSurname, String maternalSurname, boolean gender, boolean royalBlood, boolean darknessInside, boolean banished, boolean hasEducation, float wage, float fortune, float taxes, int age, Kingdom kingdom, Occupation occupation, HealthState healthState, int voteValue) {\n        super(firstname, paternalSurname, maternalSurname, gender, royalBlood, darknessInside, banished, hasEducation, wage, fortune, taxes, age, kingdom, occupation, healthState);\n        this.voteValue = voteValue;\n    }\n\n    void commandLowerClass(){\n        System.out.println(\"I'm the boss\");\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/UpperClass.java b/UpperClass.java
+--- a/UpperClass.java	(revision d94fff599b08d0e2bc3eb121f9ac32f090db11b6)
++++ b/UpperClass.java	(date 1721784502755)
+@@ -9,4 +9,9 @@
+     void commandLowerClass(){
+         System.out.println("I'm the boss");
+     }
++
++    @Override
++    void payTaxes() {
++        System.out.println("0.15");
++    }
+ }
+Index: Musician.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Musician extends LowerClass implements Artist{\n    Instrument[] instruments;\n    boolean tune;\n    public void entertain(){\n        System.out.println(\"Entertain\");\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Musician.java b/Musician.java
+--- a/Musician.java	(revision d94fff599b08d0e2bc3eb121f9ac32f090db11b6)
++++ b/Musician.java	(date 1721785017517)
+@@ -1,6 +1,11 @@
+ public class Musician extends LowerClass implements Artist{
+     Instrument[] instruments;
+     boolean tune;
++
++    public Musician(String firstname, String paternalSurname, String maternalSurname, boolean gender, boolean royalBlood, boolean darknessInside, boolean banished, boolean hasEducation, float wage, float fortune, float taxes, int age, Kingdom kingdom, Occupation occupation, HealthState healthState, boolean bow) {
++        super(firstname, paternalSurname, maternalSurname, gender, royalBlood, darknessInside, banished, hasEducation, wage, fortune, taxes, age, kingdom, occupation, healthState, bow);
++    }
++
+     public void entertain(){
+         System.out.println("Entertain");
+     }
+Index: King.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class King extends Person {\n    private final String secret = \"I'm afraid of rats\";\n    boolean trueKing;\n\n    public King(String firstname, String paternalSurname, String maternalSurname, boolean gender, boolean royalBlood, boolean darknessInside, boolean banished, boolean hasEducation, float wage, float fortune, float taxes, int age, Kingdom kingdom, Occupation occupation, HealthState healthState, boolean trueKing) {\n        super(firstname, paternalSurname, maternalSurname, gender, royalBlood, darknessInside, banished, hasEducation, wage, fortune, taxes, age, kingdom, occupation, healthState);\n    }\n\n    void makeDecree(String decree){\n        System.out.println(\"New Decree\");\n    }\n    void banish(String name){\n        System.out.println(\"You're banish\");\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/King.java b/King.java
+--- a/King.java	(revision d94fff599b08d0e2bc3eb121f9ac32f090db11b6)
++++ b/King.java	(date 1721784546842)
+@@ -6,6 +6,11 @@
+         super(firstname, paternalSurname, maternalSurname, gender, royalBlood, darknessInside, banished, hasEducation, wage, fortune, taxes, age, kingdom, occupation, healthState);
+     }
+ 
++    @Override
++    void payTaxes() {
++        System.out.println("0");
++    }
++
+     void makeDecree(String decree){
+         System.out.println("New Decree");
+     }
+Index: Person.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public abstract class Person {\n    String firstname;\n    String paternalSurname;\n    String maternalSurname;\n    boolean gender;\n    boolean royalBlood;\n    boolean darknessInside;\n    boolean banished;\n    boolean hasEducation;\n    float wage;\n    float fortune;\n    float taxes;\n    int age;\n    Kingdom kingdom;\n    Occupation occupation;\n    HealthState healthState;\n\n    public Person(String firstname, String paternalSurname, String maternalSurname, boolean gender, boolean royalBlood, boolean darknessInside, boolean banished, boolean hasEducation, float wage, float fortune, float taxes, int age, Kingdom kingdom, Occupation occupation, HealthState healthState) {\n        this.firstname = firstname;\n        this.paternalSurname = paternalSurname;\n        this.maternalSurname = maternalSurname;\n        this.gender = gender;\n        this.royalBlood = royalBlood;\n        this.darknessInside = darknessInside;\n        this.banished = banished;\n        this.hasEducation = hasEducation;\n        this.wage = wage;\n        this.fortune = fortune;\n        this.taxes = taxes;\n        this.age = age;\n        this.kingdom = kingdom;\n        this.occupation = occupation;\n        this.healthState = healthState;\n    }\n\n    void payTaxes(){\n        System.out.println(\"Pay taxes\");\n    }\n    void betrayKingdom(){\n        System.out.println(\"Betray kingdom\");\n    }\n    void inheritThrone(){\n        System.out.println(\"inherit Throne\");\n    }\n    void unearthSword(){\n        System.out.println(\"unearth Sword\");\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Person.java b/Person.java
+--- a/Person.java	(revision d94fff599b08d0e2bc3eb121f9ac32f090db11b6)
++++ b/Person.java	(date 1721784521975)
+@@ -33,11 +33,9 @@
+         this.healthState = healthState;
+     }
+ 
+-    void payTaxes(){
+-        System.out.println("Pay taxes");
+-    }
+-    void betrayKingdom(){
+-        System.out.println("Betray kingdom");
++    abstract void payTaxes();
++    void betrayKingdom() {
++
+     }
+     void inheritThrone(){
+         System.out.println("inherit Throne");
+Index: LowerClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public abstract class LowerClass extends Person{\n    boolean bow;\n\n    public LowerClass(String firstname, String paternalSurname, String maternalSurname, boolean gender, boolean royalBlood, boolean darknessInside, boolean banished, boolean hasEducation, float wage, float fortune, float taxes, int age, Kingdom kingdom, Occupation occupation, HealthState healthState, boolean bow) {\n        super(firstname, paternalSurname, maternalSurname, gender, royalBlood, darknessInside, banished, hasEducation, wage, fortune, taxes, age, kingdom, occupation, healthState);\n        this.bow = bow;\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/LowerClass.java b/LowerClass.java
+--- a/LowerClass.java	(revision d94fff599b08d0e2bc3eb121f9ac32f090db11b6)
++++ b/LowerClass.java	(date 1721784502751)
+@@ -5,4 +5,9 @@
+         super(firstname, paternalSurname, maternalSurname, gender, royalBlood, darknessInside, banished, hasEducation, wage, fortune, taxes, age, kingdom, occupation, healthState);
+         this.bow = bow;
+     }
++
++    @Override
++    void payTaxes() {
++        System.out.println("0.30");
++    }
+ }
+\ No newline at end of file
